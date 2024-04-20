@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Welcome to RedCulture Archive!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a repository for storing the RedCulture Archive.
 
-## Commands
+让你看到这行字的时候，就说明部署成功了，服务已经开始运行了
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+2024年4月20日22:18:29
