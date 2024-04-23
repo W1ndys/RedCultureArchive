@@ -1,1 +1,539 @@
-site_name: My Docs
+# 项目信息
+# =============================================================================================================================
+
+# 站点名称
+site_name: 红色文化档案馆
+
+# 站点URL
+site_url: https://rca.w1ndys.top/
+
+# 仓库地址
+repo_url: https://github.com/W1ndys/RedCultureArchive
+
+# 仓库名称
+repo_name: RedCultureArchive
+
+# 仓库编辑地址
+edit_uri: edit/main/docs/
+
+# 站点描述
+site_description: 红色文化档案馆,缅怀先烈,牢记使命,传承红色精神！
+
+# 作者ID
+site_author: W1ndys
+
+# 版权声明
+copyright: Copyright &copy; 2024 W1ndys
+
+# =============================================================================================================================
+# 主题配置
+theme:
+  language: zh
+  name: material
+  custom_dir: overrides
+
+  # 调色板配置
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  palette:
+    #  - media: "(prefers-color-scheme)"
+    #    toggle:
+    #      icon: material/brightness-auto
+    #      name: 关闭自动模式
+
+    - media: "(prefers-color-scheme: light)" # 用于检测媒体模式
+      scheme: default # 系统变量,这个不能改
+      primary: indigo # 可以自定义,建议使用系统主题然后覆盖想改的颜色
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 开启夜间模式
+
+    - media: "(prefers-color-scheme: dark)" # 用于检测媒体模式
+      scheme: slate # 系统变量,这个不能改
+      primary: black # 可以自定义,建议使用系统主题然后覆盖想改的颜色
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 关闭夜间模式
+
+  # 字体配置
+  font:
+    # false # 关闭谷歌字体
+    # text: Roboto
+    # code: Roboto Mono
+    text: Noto Sans SC
+    code: Fira Code
+
+  # 功能配置
+  features:
+    - header.autohide # 标题自动隐藏
+    - announce.dismiss # 公告标为已读
+    - navigation.footer # 页脚上下页
+    - content.code.copy # 代码复制
+    - content.code.annotate # 代码注释
+    - content.action.edit # 编辑此页面
+    - content.action.view # 查看源代码
+    # - navigation.instant # 即时加载
+    # - navigation.instant.progress # 进度指示器
+    # - navigation.instant.preview # 预览模式
+    - navigation.tracking # 锚点追踪
+    - navigation.tabs # 导航选项卡
+    #- navigation.tabs.sticky        # 固定导航标签
+    # - navigation.sections # 导航分组呈现,注意,这决定左侧目录的布局变化 https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=nav#navigation-expansion
+    #- navigation.expand     # 左侧默认全部展开,与 navigation.prune 冲突
+    # - navigation.prune # 导航压缩,与 navigation.expand 冲突,开启后默认全不展开,需要手动展开
+    - navigation.indexes # 章节索引页,需要单独开一个index.md,与分组呈现类似,影响目录的布局,一级标题下自带index,与 toc.integrate 冲突 https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages-with-section-index-pages
+    - toc.follow # 锚点跟随
+    #- toc.integrate         # 导航整合,会把右侧目录合并到左边,与 navigation.indexes 冲突
+    - navigation.top # 返回顶部
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索突出显示
+    - search.share # 搜索分享
+    - content.tooltips # 改进的工具提示
+    - content.tabs.link # 全部锚链接,启用后,整个文档站点中的所有内容选项卡都将被链接
+
+  # 站点的logo（标签页那个）
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#site-icons
+  favicon: https://p.qlogo.cn/gh/497554955/497554955/640/
+
+  # 页面logo图标
+  # 关于logo配置,如果logo是使用官方图标库,就必须在icon下面,如果是自定义图标,就必须在theme下面
+  # logo: https://p.qlogo.cn/gh/497554955/497554955/640/
+
+  # 图标设置
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#customization
+  icon:
+    # logo
+    # 关于logo配置,如果logo是使用官方图标库,就必须在icon下面,如果是自定义图标,就必须在theme下面
+    logo: material/tools
+
+    # 页面编辑和查看图标
+    edit: material/pencil
+    view: material/eye
+
+    # 存储库图标
+    repo: fontawesome/brands/github
+
+    # 页面底部上下页图标
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+
+    # 警告/提示图标
+    # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons
+    # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions # 定制自定义图标
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+      # 备用的图标 FontAwesome
+
+      # note: fontawesome/solid/note-sticky
+      # abstract: fontawesome/solid/book
+      # info: fontawesome/solid/circle-info
+      # tip: fontawesome/solid/bullhorn
+      # success: fontawesome/solid/check
+      # question: fontawesome/solid/circle-question
+      # warning: fontawesome/solid/triangle-exclamation
+      # failure: fontawesome/solid/bomb
+      # danger: fontawesome/solid/skull
+      # bug: fontawesome/solid/robot
+      # example: fontawesome/solid/flask
+      # quote: fontawesome/solid/quote-left
+
+    # 注释图标
+    # https://squidfunk.github.io/mkdocs-material/reference/annotations/#annotation-icons
+    annotation: material/plus-circle-outline
+
+# 附加的CSS文件
+extra_css:
+  - stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - stylesheets/code.css
+  - stylesheets/icons-emojis.css
+  - stylesheets/tasklist.css
+  - stylesheets/admonition.css
+  - stylesheets/status.css
+  - stylesheets/mouse.css
+
+# 附加的JS文件
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/mathjax.js # Mathjax
+  - https://polyfill.io/v3/polyfill.min.js?features=es6 # Mathjax
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # Mathjax
+  - javascripts/katex.js # katex
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js # katex
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js # katex
+  - javascripts/tablesort.js # 数据表排序
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # 数据表排序
+  - javascripts/mouse_moving.js # 鼠标移动星星特效
+
+# 额外配置
+extra:
+  # 是否显示官方仓库
+  generator: true
+
+  # 左上角跳转主页
+  homepage: /
+
+  # Cookie
+  # consent:
+  #   title: Cookie同意
+  #   description: >
+  #     我们使用cookie来识别您的重复访问和偏好,以及衡量我们文档的效果和用户是否找到他们正在搜索的内容。通过您的同意,您帮助我们改进我们的文档。<br>
+  #     <strong>请注意：</strong> 您可以随时更改您的Cookie设置,通过浏览器的设置或者在访问我们网站时,接受或拒绝Cookie。但是,如果您拒绝使用Cookie,可能会影响您在我们网站上的体验。
+  #   cookies:
+  #     analytics: 51.la
+  # custom: Custom cookie    # 自定义cookies接受项目
+
+  # 统计服务
+  analytics:
+    provider: analytics
+
+  # 状态页
+  status:
+    new: Recently added
+
+  # 社交账号
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+  social:
+    - icon: material/home
+      link: https://w1ndys.top
+      name: 作者主页
+
+    - icon: fontawesome/brands/qq
+      link: https://blog.w1ndys.top/html/QQ.html
+      name: 作者QQ
+
+    - icon: material/email
+      link: mailto:w1ndys@outlook.com
+      name: 作者邮箱
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/W1ndys
+      name: 作者Github主页
+
+    - icon: fontawesome/solid/blog
+      link: https://blog.w1ndys.top/
+      name: 作者博客
+
+    - icon: simple/materialformkdocs
+      name: Material for MkDocs提供搭建文档服务
+      link: https://squidfunk.github.io/mkdocs-material/
+
+    - icon: simple/vercel
+      link: https://vercel.com/w1ndys
+      name: Vercel提供部署服务
+
+    - icon: simple/netlify
+      name: Netlify提供部署服务
+      link: https://www.netlify.com/
+
+    - icon: W1ndys/Render
+      name: Render提供部署服务
+      link: https://render.com/
+
+    - icon: simple/cloudflare
+      name: Cloudflare提供部署服务
+      link: https://www.cloudflare.com/
+
+    - icon: W1ndys/51la
+      name: 51la提供统计服务
+      link: https://v6.51.la/report/overview?comId=416432
+
+# =============================================================================================================================
+
+# Markdown扩展配置
+# https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#/
+markdown_extensions:
+  # Markdown缩写 - abbr
+  # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations
+  - abbr
+
+  # Markdown警告 - admonition
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage
+  - admonition
+
+  # 属性列表 - attr_list
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists
+  - attr_list
+
+  # 定义列表 - def_list
+  # https://squidfunk.github.io/mkdocs-material/reference/lists/#/using-definition-lists
+  - def_list
+
+  # 脚注 - footnotes
+  # https://squidfunk.github.io/mkdocs-material/reference/footnotes/#/adding-footnote-references
+  - footnotes
+
+  # HTML of Markdown - md_in_html
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+  - md_in_html
+
+  # 表格 - tables,数据表
+  # https://squidfunk.github.io/mkdocs-material/reference/data-tables/#/usage
+  - tables
+
+  # 目录
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#table-of-contents
+  - toc:
+      permalink: ⚓︎ # 链接图标样式
+      # title: 目录  # 右侧目录的标题
+      permalink_title: 锚链接到本标题
+
+  # Mathjax
+  - pymdownx.arithmatex:
+      generic: true
+
+  # 粗体斜体 ** __
+  - pymdownx.betterem
+
+  # 语法高亮 下划线 上下标显示
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#caret-mark-tilde
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # 增删红绿标记
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting/#/highlighting-changes
+  - pymdownx.critic:
+      mode: view
+
+  # 细节 - pymdownx.details
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#details
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#collapsible-blocks
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#admonition
+  - pymdownx.details
+
+  # 表情符号
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#emoji
+  - pymdownx.emoji:
+      emoji_index:
+        !!python/name:material.extensions.emoji.twemoji # 定义使用哪组表情符号进行渲染
+
+
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg #定义如何呈现已解析的表情符号或图标简码。请注意,图标只能与to_svg配置一起使用
+
+
+      options:
+        custom_icons:
+          - overrides/.icons
+
+  # 代码高亮
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+  - pymdownx.highlight:
+      linenums: true # 行号开关
+      anchor_linenums: true # 锚链接
+      use_pygments: true # true为使用pygments进行语法高亮,false为使用 JavaScript 语法突出显示
+      pygments_lang_class: true # 添加 CSS 类来识别代码块的语言,这对于自定义注释标记的功能至关重要
+      auto_title: true # 显示正在使用的语言的名称
+      linenums_style: pymdownx-inline # table  # pymdownx-inline # 添加行号的方法,此处留空为无行号
+      line_spans: __span # 优化,让每一行代码都包含在<span>中
+
+  # 内联高亮代码块,构建在代码高亮之上
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.inlinehilite
+
+  # 按键/键盘
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#keys
+  - pymdownx.keys
+
+  # 智能符号,某些字符序列转换为其相应的符号,例如版权符号或分数
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#smartsymbols
+  # https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/#/
+  - pymdownx.smartsymbols
+
+  # 片段
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
+  - pymdownx.snippets:
+      auto_append: # 缩写术语表
+        - includes/abbreviations.md
+
+  # 超级栅栏,允许代码和内容块任意嵌套,包括警告、选项卡、列表和所有其他元素。
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+  # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#nested-fence-format
+  - pymdownx.superfences:
+      # 与高亮语冲突 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.tabbed: # 选项卡   # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#anchor-links
+      alternate_style: true
+      combine_header_slug: true # 添加一个tab锚点
+      # 为tab增加一个大标题,生成一个指定的锚点链接,上面的进阶用法
+      slugify:
+        !!python/object/apply:pymdownx.slugs.slugify # 允许自定义 slug 函数。对于某些语言,默认值可能不会产生良好且可读的标识符 - 考虑使用另一个 slug 函数
+        kwds:
+          case: lower
+
+  # 任务列表
+  - pymdownx.tasklist:
+      custom_checkbox: true # 切换复选框的渲染样式,用漂亮的图标替换原生复选框样式,推荐打开
+      clickable_checkbox: false # 是否可点击,但这种状态不是永久的,刷新会还原,不推荐打开
+
+# 插件配置
+plugins:
+  # 博客配置
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
+  # https://squidfunk.github.io/mkdocs-material/plugins/blog/#/
+  - blog:
+      enabled: true
+      blog_toc: true
+      blog_dir: Update
+      post_date_format: medium
+      post_url_date_format: yyyy/MM
+      post_url_format: "/{slug}"
+      post_excerpt: optional
+
+  # 信息插件,用来调试的,便于提交bug
+  # https://squidfunk.github.io/mkdocs-material/plugins/info/#configuration
+  # - info:
+
+  # 离线插件
+  # https://squidfunk.github.io/mkdocs-material/plugins/offline/#built-in-offline-plugin
+  # - offline:
+  #     enabled: !ENV [OFFLINE, false]
+
+  # 站点搜索
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#/
+  # 搜索插件
+  # https://squidfunk.github.io/mkdocs-material/plugins/search/#built-in-search-plugin
+  - search:
+      enabled: true
+      lang:
+        - zh
+        - en
+      separator: '[\s\u200b\-]|[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;' # 正则表达式,汉语+特殊字符+案例变更+版本字符串+HTML
+      pipeline:
+        - stemmer # 词干提取器,将单词的前缀和后缀去除
+        - stopWordFilter # 去除常用停用词
+        - trimmer # 去除空白字符
+
+  # 加密插件
+  - encryptcontent:
+      title_prefix: "" # 加密后的标题前缀
+      summary: "这个项目已被加密" # 加密后的标题显示
+      encryption_info_message: "微信搜索公众号：W1ndys,关注后回复“选课指北”可获取密码。解锁后请务必刷新一下否则显示不全" # 加密后的文章显示
+      placeholder: "请输入密码" # 输入密码的提示
+      decryption_failure_message: "密码错误" # 密码错误的提示
+
+  # 标签插件
+  # https://squidfunk.github.io/mkdocs-material/plugins/tags/#built-in-tags-plugin
+  - tags:
+      enabled: true
+      tags: true
+      tags_file: tags.md
+
+  # 资源下载插件,扫描生成的 HTML 中的外部资源,即脚本、样式表、图像和 Web 字体,下载它们,将它们存储在目录中
+  # https://squidfunk.github.io/mkdocs-material/plugins/privacy/#built-in-privacy-plugin
+  # - privacy:
+  #     assets: false # 是否下载资源
+
+  # Glightbox插件 | 灯箱 | 图片可点击放大
+  - glightbox:
+      # 启用触摸导航
+      touchNavigation: true
+      # 禁用循环播放
+      loop: false
+      # 图片效果为缩放
+      effect: zoom
+      # 幻灯片效果为滑动
+      slide_effect: slide
+      # 图片宽度为100%
+      width: 100%
+      # 图片高度自适应
+      height: auto
+      # 可缩放图片
+      zoomable: true
+      # 可拖拽图片
+      draggable: true
+      # 跳过指定类名的元素
+      skip_classes:
+        - custom-skip-class-name
+      # 禁用自动生成的图片标题
+      auto_caption: false
+      # 图片标题位置在底部
+      caption_position: bottom
+      # 背景颜色为白色
+      background: white
+      # 启用阴影效果
+      shadow: true
+
+  # 日期插件,由于这个日期插件耗费了我们太多精力,我们决定删除这个功能
+  # - git-revision-date-localized:
+  #     # enabled: !ENV [CI, false] # 本地关闭
+  #     enable_creation_date: true # 启用创建日期
+  #     type: iso_date # date datetime  iso_date  iso_datetime  timeago
+  #     fallback_to_build_date: true
+  #     timezone: Asia/Shanghai
+
+  # 作者插件
+  # 注意,本插件与远程存储库链接,启用新文件时必须先上传,或者注释掉本设置,否则本地调试会报错
+  - git-committers:
+      enabled: false # 本地关闭
+      repository: W1ndys/Easy-QFNU
+      branch: main
+
+  # # 作者插件,感觉不如上面那个好
+  # - git-authors
+
+  # 外部引用插件,一个 MkDocs 插件,它将 mkdocs.yml 额外变量注入到 markdown 模板中
+  # https://github.com/rosscdh/mkdocs-markdownextradata-plugin
+  - markdownextradata:
+      data: ./docs/_data/ # 额外数据文件
+
+# 监听文件,可以实时刷新的目录
+watch:
+  - includes # 目录
+  - docs
+  - mkdocs.yml # 配置文件
+  - overrides # 部分
+
+# 目录
+# =============================================================================================================================
+# 注意,目录路径的大小写是敏感的,请注意大小写
+#
+nav:
+  - 首页:
+      - index.md
+
+  - 山东省:
+      - Shandong/index.md
+
+  - 省份2:
+      - Province2/index.md
+
+  - 省份3:
+      - Province3/index.md
+
+  - 省份4:
+      - Province4/index.md
+
+  - 省份5:
+      - Province5/index.md
+
+  - 省份6:
+      - Province6/index.md
+
+  - 省份7:
+      - Province7/index.md
+
+  - 更新日志:
+      - Update/index.md
+#
+# =============================================================================================================================
+# How to write?
+# https://squidfunk.github.io/mkdocs-material/reference/#/
