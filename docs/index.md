@@ -136,19 +136,11 @@ hide:
 </div>
 
 <div class="grid cards" markdown>
--   推荐工具:
+- 地图:点击可直接跳转百度地图搜索四川省
 
     ---
 
-    - [高德地图](https://www.amap.com/)
-
-    - [百度地图](https://map.baidu.com/)
-
-    - [腾讯地图](https://map.qq.com/)
-
-    - [搜狗地图](https://map.sogou.com/)
-
-    - [谷歌地图](https://www.google.com/maps/)
+    [![map](map.jpg)](https://map.baidu.com/search/%E5%9B%9B%E5%B7%9D%E7%9C%81/@11202974.97015903,3516933.635000112,7.66z?querytype=s&da_src=shareurl&wd=%E5%9B%9B%E5%B7%9D&c=286&src=0&pn=0&sug=0&l=13&b=(12954181,4167162;13015621,4196570)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1){target="_blank"}
 
 </div>
 
