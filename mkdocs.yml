@@ -2,7 +2,7 @@
 # =============================================================================================================================
 
 # 站点名称
-site_name: 红色文化档案馆
+site_name: 忆山河
 
 # 站点URL
 site_url: https://rca.w1ndys.top/
@@ -17,7 +17,7 @@ repo_name: RedCultureArchive
 edit_uri: edit/main/docs/
 
 # 站点描述
-site_description: 红色文化档案馆,缅怀先烈,牢记使命,传承红色精神！
+site_description: 忆山河——红色文化档案馆,缅怀先烈,牢记使命,传承红色精神！
 
 # 作者ID
 site_author: W1ndys
