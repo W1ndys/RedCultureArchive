@@ -50,17 +50,8 @@ hide:
 
 <div class="slideshow-container">
     <div class="slide">
-        <img src="slide1.png" alt="Slide 1">
+        <img src="slide1.jpg" alt="Slide 1">
     </div>
-    <div class="slide">
-        <img src="slide2.png" alt="Slide 2">
-    </div>
-    <div class="slide">
-        <img src="slide3.png" alt="Slide 3">
-    </div>
-
-    <button class="prev" onclick="plusSlides(-1)">❮</button>
-    <button class="next" onclick="plusSlides(1)">❯</button>
 
 </div>
 
@@ -87,10 +78,7 @@ hide:
         slides[slideIndex-1].style.display = "block";
     }
 
-    // 自动轮播
-    setInterval(function() {
-        plusSlides(1);
-    }, 2000);
+
 </script>
 
 <div class="grid cards" markdown>
@@ -105,14 +93,6 @@ hide:
 
 - [西柏坡精神](/XibopuMind/)
 
-- [其他精神1](/OtherMind1/)
-
-- [其他精神2](/OtherMind2/)
-
-- [其他精神3](/OtherMind3/)
-
-- [其他精神4](/OtherMind4/)
-
 </div>
 
 </div>
@@ -123,15 +103,7 @@ hide:
 
     ---
 
-    - [五四青年节](/54/ )
-
-    - [推荐2](/recommend2/)
-
-    - [推荐3](/recommend3/)
-
-    - [推荐4](/recommend4/)
-
-    - [推荐5](/recommend5/)
+    ![青岛](qingdao.jpg)
 
 </div>
 
